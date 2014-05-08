@@ -25,7 +25,6 @@ a {
 	text-transform: uppercase;
 	color: #111;
 	text-decoration: underline;
-	font-size: 75%;
 }
 
 a:hover {
@@ -131,4 +130,5 @@ a:hover {
 
 .end ul li {
 	display: inline;
+	font-size: 75%;
 }
