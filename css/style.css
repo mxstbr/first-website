@@ -23,7 +23,7 @@ p {
 a {
 	font-family: "Roboto Slab", serif;
 	text-transform: uppercase;
-	color: #111;
+	color: inherit;
 	text-decoration: underline;
 }
 
@@ -31,74 +31,109 @@ a:hover {
 	color: #808080;
 }
 
-/* Headings */
-
-.heading {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	font-size: 36px;
-	text-transform: uppercase;
-	margin-bottom: 0px;
-	text-align: center;
+h1, h2, h3, h4 {
+	font-family: 'Roboto', serif;
 }
 
-.subheading {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	font-size: 27px;
-	text-transform: uppercase;
-	margin-bottom: 0px;
-	text-align: center;
+h1 {
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
-.cap {
-	text-transform: capitalize;
+/* 
+ * Classes and IDs
+ */
+
+.scrollToTop {
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #444;
+	position: fixed;
+	font-size: 12px;
+	text-transform: none;
+	border: 2px solid rgba(0, 0, 0, .7);
+	padding: 5px;
+	border-radius: 3px;
+	color: rgba(0, 0, 0, .7);
+	top: 90vh;
+	right: 1vw;
+	text-decoration: none;
+}
+
+.scrollToTop:hover {
+	border: 2px solid rgba(0, 0, 0, 1);
+	color: rgba(0, 0, 0, 1);
 }
 
 .fptext {
-	color: #fff;
+	color: #000;
 	margin: 0;
 	text-align: center;
-	z-index: 100;
+	z-index: 6;
 	position: relative;
 	top: 50vh;
 	margin: 0;
 	padding: 0;
 }
 
+#frontpage {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-image: url('../img/frontpage.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	font-family: 'Oswald';
+	z-index: 0;
+}
+
+#aboutme {
+	text-align: center;
+	padding-top: 2vh;
+}
+
+.cap {
+	text-transform: capitalize;
+}
+
+.item {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	width: 662px;
+}
+
+.break {
+	padding: 0;
+	margin: 0 auto;
+	width: 88px;
+	height: 2px;
+	background-color: #000;
+	left: ;
+}
+
+/* Button */
+
 .btn {
 	text-decoration: none;
 	text-transform: none;
-	border: 2px solid rgba(255, 255, 255, .5);
+	border: 2px solid rgba(0, 0, 0, .7);
 	padding: 5px;
 	border-radius: 3px;
-	color: rgba(255, 255, 255, .5);
-	bottom: 35vh;
+	color: rgba(0, 0, 0, .7);
+	top: 90vh;
 	font-size: 18px;
 }
 
 .btn:hover {
-	border: 2px solid rgba(255, 255, 255, 1);
-	color: rgba(255, 255, 255, 1);
+	border: 2px solid rgba(0, 0, 0, 1);
+	color: rgba(0, 0, 0, 1);
 }
 
-/* 
- * Classes and IDs in order of appearance
- */
-
-.main {
-	width: 100%;
-	max-width: 660px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Top Area */
-
-#top {
-	text-align: center;
-	margin-bottom: 60px;
-}
 
 /* Image at the top */
 
@@ -111,7 +146,6 @@ a:hover {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20.44px;
 }
 
 #img {
@@ -135,29 +169,13 @@ a:hover {
 	font-size: 24px;
 }
 
-#frontpage {
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-	background-image: url('../img/frontpage.jpg');
-	background-size: 100%;
-	background-attachment: fixed;
-	font-family: 'Oswald';
-}
-
-/* Main Area */
-
-#main {
-	text-align: center;
-}
-
-.three {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 /* Footer */
+
+#footer {
+	background-color: #000;
+	color: #fff;
+}
 
 .end {
 	display: block;
@@ -169,6 +187,7 @@ a:hover {
 .end ul {
 	-webkit-padding-start: 0px;
 	padding-left: 0px;
+	margin-bottom: 0;
 }
 
 .end ul li {

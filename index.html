@@ -12,61 +12,75 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Source+Sans+Pro|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<title>Maximilian Stoiber</title>
 </head>
 <body>
+	<a href="#" class="scrollToTop">Scroll To Top</a>
 
 	<!-- Begin Front Page -->
-	<div id="frontpage">
-		<h1 class="fptext title">Hi, I'm Max!</h1>
-		<h3 class="fptext subtitle">Violinist, Web Designer, Skiing Instructor</p>
-		<a href="#work" class="btn">Tell me more!</a>
-	</div>
+	<section id="frontpage">
+			<h1 class="fptext title">Hi, I'm Max!</h1>
+			<h3 class="fptext subtitle">Violinist, Web Designer, Skiing Instructor</p>
+			<a href="#aboutme" class="btn" id="a">About me</a>
+	</section>
 	<!-- End Front Page -->
 
-	<div class="main">
+	<script>
+        $(document).ready(function (){
+            $("#a").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#aboutme").offset().top
+                    }, 1500);
+                //});
+            });
+            //Check to see if the window is top if not then display button
+        	$(window).scroll(function(){
+        		if ($(this).scrollTop() > 300) {
+        			$('.scrollToTop').fadeIn();
+        		} else {
+        			$('.scrollToTop').fadeOut();
+        		}
+        	});
+        	
+        	//Click event to scroll to top
+        	$('.scrollToTop').click(function(){
+        		$('html, body').animate({scrollTop : 0},800);
+        		return false;
+        	});
+        });
+    </script>
 
-		<!-- Begin Main Area -->
-		<div class="three">
-			<h2 class="heading">About Me</h2>
-		</div>
-		<div class="three">
-			<h2 class="subheading">Sports</h2>
+	<!-- Begin work -->
+	<section id="aboutme">
+		<h1>About Me</h1>
+		<div class="item">
+			<div class="break"></div>
+			<h2>Sports</h2>
 			<p>I play tennis at the Better Tennis Academy, was very ambitious for a few years but had to slow my training schedule to focus on my studies. I used to ski competetively at USC Greim, a skiing club which has regular trainings at Lachtal, and will finish my skiing instructor training during the summer holidays 2014, after which I will be a certified Landesskilehrer.</p>
 		</div>
-		<div class="three">
-			<h2 class="subheading">Music</h2>
-			<p>Music plays a big part in my life, and I spend a lot of time finding new genres, songs and artist. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I play the violin since more years than I can count, recently started to learn singing and picked up DJing.</p>
-		</div>
-		<div class="three">
-			<h2 class="heading">IT</h2>
-		</div>
-		<div class="three">
-			<h2 class="subheading">Web Design</h2>
-			<p>After learning very basic HTML and CSS ago at school, I tried my hand on Java and C++, but my heart always was with heads and bodies, classes and IDs. I found Twitter Bootstrap a few years later, and from there on I learned as much as I could.</p>
-		</div>
-		<!-- End Main Area -->
+	</section>
 
-		<!-- Begin Footer -->
-		<div id="footer">
-			<div class="end">
-				<h3 class="cap"><a href="blog.html">Blog</a></h3>
-				<ul>
-					<li><a href="mailto:contact@mstoiber.com" target="_blank">E-Mail</a></li>
-					<li><a href="http://facebook.com/JustStoiber" target="_blank">Facebook</a></li>
-					<li><a href="http://twitter.com/mstoiber05" target="_blank">Twitter</a></li>
-					<li><a href="http://plus.google.com/+MaxStoiber" target="_blank">Google+</a></li>
-				</ul>
-			</div>
-			<div class="end">
-				<ul>
-					<li><a href="impressum.html">Impressum</a></li>
-					<li><a href="cv.pdf">Full CV</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- End Footer -->
 
-	</div> <!-- .main -->
+	<!-- Begin Footer -->
+	<section id="footer">
+		<div class="end">
+			<h3 class="cap"><a href="blog.html">Blog</a></h3>
+			<ul>
+				<li><a href="mailto:contact@mstoiber.com" target="_blank">E-Mail</a></li>
+				<li><a href="http://facebook.com/JustStoiber" target="_blank">Facebook</a></li>
+				<li><a href="http://twitter.com/mstoiber05" target="_blank">Twitter</a></li>
+				<li><a href="http://plus.google.com/+MaxStoiber" target="_blank">Google+</a></li>
+			</ul>
+		</div>
+		<div class="end">
+			<ul>
+				<li><a href="impressum.html">Impressum</a></li>
+				<li><a href="cv.pdf">Full CV</a></li>
+			</ul>
+		</div>
+	</section>
+	<!-- End Footer -->
 </body>
 </html>
