@@ -22,7 +22,6 @@ p {
 
 a {
 	font-family: "Roboto Slab", serif;
-	text-transform: uppercase;
 	color: inherit;
 	text-decoration: underline;
 }
@@ -45,9 +44,12 @@ h1 {
  * Classes and IDs
  */
 
+i {
+	color: #3CB371;
+}
+
 .scrollToTop {
-	width: 100px;
-	height: 20px;
+	display: inline-block;
 	text-align: center;
 	font-weight: bold;
 	color: #444;
@@ -83,11 +85,18 @@ h1 {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-	background-image: url('../img/frontpage.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat:no-repeat;
-	font-family: 'Oswald';
+	background: url('../img/frontpage.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	/*background:
+  	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;*/
 	z-index: 0;
 }
 
@@ -98,16 +107,6 @@ h1 {
 
 .cap {
 	text-transform: capitalize;
-}
-
-.item {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	width: 100%;
-	max-width: 660px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .break {
@@ -121,22 +120,61 @@ h1 {
 
 /* Button */
 
-.btn {
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="submit"].btn,
+button.btn {
+	cursor: pointer;
+}
+
+a.btn,.btn {
+   	margin-right: 1em; /* remove this while use*/
+	display: inline-block;
+	outline: none;
+	*zoom: 1;
+	text-align: center;
 	text-decoration: none;
-	text-transform: none;
-	border: 2px solid rgba(0, 0, 0, .7);
-	padding: 5px;
-	border-radius: 3px;
-	color: rgba(0, 0, 0, .7);
-	top: 90vh;
-	font-size: 18px;
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	border: 1px solid;
+	transition: all 0.2s ease;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+}
+/* Radius */
+.btn-radius {
+  border-radius: 3px;
+}
+/* Sizes */
+.btn-small {
+	font-size: 0.8125em;
+	padding: 0.4125em 1.25em;
+}
+.btn-medium {
+	font-size: 0.9375em;
+	padding: 0.5375em 1.375em;
+}
+.btn-large {
+	font-size: 1.0625em;
+	padding: 0.5625em 1.5em;
 }
 
-.btn:hover {
-	border: 2px solid rgba(0, 0, 0, 1);
-	color: rgba(0, 0, 0, 1);
+/* Colors */
+.btn-green {
+	color: #3CB371;
+	border-color: #3CB371;
 }
-
+.btn-green:hover {
+  background: #3CB371;
+  color: #fff;
+  border-color: #3CB371;		
+}
 
 /* Image at the top */
 
@@ -168,6 +206,7 @@ h1 {
 
 .subtitle {
 	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
 	margin-top: 0px;
 	font-size: 24px;
 }
