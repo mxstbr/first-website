@@ -33,6 +33,7 @@ a:hover {
 
 h1, h2, h3, h4 {
 	font-family: 'Roboto', serif;
+	margin-bottom: 0;
 }
 
 h1 {
@@ -100,11 +101,13 @@ h1 {
 }
 
 .item {
-	height: 100vh;
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	width: 662px;
+	width: 100%;
+	max-width: 660px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .break {

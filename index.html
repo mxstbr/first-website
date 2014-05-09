@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 	<meta name=”description” content=”Maximilian Stoibers personal Website, including his personal blog”>
 	<link rel=”author” href=”https://plus.google.com/+MaxStoiber“/>
 	<meta property=”og:title” content=”Maximilian Stoibers personal website”/>
@@ -11,8 +11,10 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/grid.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Source+Sans+Pro|Roboto+Slab:300' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
 	<title>Maximilian Stoiber</title>
 </head>
 <body>
@@ -26,39 +28,19 @@
 	</section>
 	<!-- End Front Page -->
 
-	<script>
-        $(document).ready(function (){
-            $("#a").click(function (){
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#aboutme").offset().top
-                    }, 1500);
-                //});
-            });
-            //Check to see if the window is top if not then display button
-        	$(window).scroll(function(){
-        		if ($(this).scrollTop() > 300) {
-        			$('.scrollToTop').fadeIn();
-        		} else {
-        			$('.scrollToTop').fadeOut();
-        		}
-        	});
-        	
-        	//Click event to scroll to top
-        	$('.scrollToTop').click(function(){
-        		$('html, body').animate({scrollTop : 0},800);
-        		return false;
-        	});
-        });
-    </script>
-
 	<!-- Begin work -->
 	<section id="aboutme">
-		<h1>About Me</h1>
-		<div class="item">
+		<div class="grid-container">
+			<h1>About Me</h1>
 			<div class="break"></div>
-			<h2>Sports</h2>
-			<p>I play tennis at the Better Tennis Academy, was very ambitious for a few years but had to slow my training schedule to focus on my studies. I used to ski competetively at USC Greim, a skiing club which has regular trainings at Lachtal, and will finish my skiing instructor training during the summer holidays 2014, after which I will be a certified Landesskilehrer.</p>
+			<div class="grid-50">
+				<h2>Sports</h2>
+				<p>I play tennis at the Better Tennis Academy, was very ambitious for a few years but had to slow my training schedule to focus on my studies. I used to ski competetively at USC Greim, a skiing club which has regular trainings at Lachtal, and will finish my skiing instructor training during the summer holidays 2014, after which I will be a certified Landesskilehrer.</p>
+			</div>
+			<div class="grid-50">
+				<h2>Music</h2>
+				<p>Music plays a big part in my life, and I spend a lot of time finding new genres, songs and artist. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I play the violin since more years than I can count, recently started to learn singing.</p>
+			</div>
 		</div>
 	</section>
 
