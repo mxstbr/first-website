@@ -33,9 +33,15 @@ a:hover {
 h1, h2, h3, h4 {
 	font-family: 'Roboto', serif;
 	margin-bottom: 0;
+	color: #193441;
 }
 
 h1 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+h2 {
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -44,10 +50,17 @@ h1 {
  * Classes and IDs
  */
 
-i {
+i.fa-green {
 	color: #3CB371;
 }
 
+i.fa-blue {
+	color: #193441;
+}
+
+i.fa-grey {
+	color: #43464B;
+}
 
 .scrollToTop {
 	display: inline-block;
@@ -72,7 +85,7 @@ i {
 }
 
 .fptext {
-	color: #000;
+	color: #193441;
 	margin: 0;
 	text-align: center;
 	z-index: 6;
@@ -86,6 +99,7 @@ i {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
+	/*background-color: #D1DBBD;*/
 	background: url('../img/frontpage.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -104,6 +118,30 @@ i {
 #aboutme {
 	text-align: center;
 	padding-top: 2vh;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #d6d6d6;
+}
+
+#portfolio {
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.grid-95 {
+}
+
+aside {
+	color: #938d8d;
+	font-family: 'Roboto Slab', sans-serif;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.5em;
+}
+
+body:nth-child(odd) {
+	background: #f0f0f0;
 }
 
 .cap {
@@ -115,8 +153,9 @@ i {
 	margin: 0 auto;
 	width: 88px;
 	height: 2px;
-	background-color: #000;
+	background-color: #193441;
 	left: ;
+	margin-bottom: 0.25em;
 }
 
 /* Button */
@@ -133,7 +172,6 @@ button.btn {
 }
 
 a.btn,.btn {
-   	margin-right: 1em; /* remove this while use*/
 	display: inline-block;
 	outline: none;
 	*zoom: 1;
@@ -167,14 +205,40 @@ a.btn,.btn {
 }
 
 /* Colors */
-.btn-green {
-	color: #3CB371;
-	border-color: #3CB371;
+.btn-grey {
+	color: #91AA9D;
+	border-color: #91AA9D;
 }
-.btn-green:hover {
-  background: #3CB371;
+.btn-grey:hover {
+  background: #91AA9D;
   color: #fff;
-  border-color: #3CB371;		
+  border-color: #91AA9D;		
+}
+
+.btn-green {
+	color: #4a95ba;
+	border-color: #4a95ba;
+}
+
+.btn-green:hover {
+	background: #4a95ba;
+	color: #fff;
+	border-color: #4a95ba;
+}
+
+/* Capitalization */
+.btn-cap {
+	text-transform: uppercase;
+}
+
+/* Button Disabled */
+.btn-dis {
+	cursor: wait;
+}
+
+.btn-dis:hover {
+	background: transparent;
+	color: #91AA9D;
 }
 
 /* Image at the top */
