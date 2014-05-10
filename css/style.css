@@ -126,6 +126,7 @@ i.fa-grey {
 #portfolio {
 	text-align: center;
 	border-bottom: 1px solid #d6d6d6;
+	padding-top: 2vh;
 }
 
 .grid-95 {
@@ -134,7 +135,6 @@ i.fa-grey {
 aside {
 	color: #938d8d;
 	font-family: 'Roboto Slab', sans-serif;
-	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0.5em;
@@ -233,7 +233,7 @@ a.btn,.btn {
 
 /* Button Disabled */
 .btn-dis {
-	cursor: wait;
+	cursor: not-allowed;
 }
 
 .btn-dis:hover {
