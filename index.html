@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<meta name=”description” content=”Maximilian Stoibers personal Website, including his personal blog”>
 	<link rel=”author” href=”https://plus.google.com/+MaxStoiber“/>
 	<meta property=”og:title” content=”Maximilian Stoibers personal website”/>
@@ -14,7 +15,7 @@
 	<link rel="stylesheet" href="css/grid.css">
 
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:300,400|Pacifico' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="js/scroll.js"></script>
@@ -24,9 +25,11 @@
 <body>
 	<!-- Begin Front Page -->
 	<section id="frontpage">
-			<h1 class="fptext title">Hi, I'm <strong>Max!</strong></h1>
+			<h1 class="fptext title" id="logo">Maximilian Stoiber</h1>
 			<h3 class="fptext subtitle">Violinist, Front-End Developer, Skiing Instructor</p>
-			<a href="#aboutme" class="btn btn-small btn-green btn-radius" id="a">About me</a>
+			<a href="#aboutme" class="btn btn-small btn-blue btn-radius" id="a"><i class="fa fa-angle-down"></i> About me <i class="fa fa-angle-down"></i></a>
+			<a href="#portfolio" class="btn btn-small btn-green btn-radius" id="p"><i class="fa fa-angle-double-down"></i> Portfolio <i class="fa fa-angle-double-down"></i></a>
+			<a href="#" class="btn btn-small btn-red btn-radius" id="blog"><i class="fa fa-external-link fa-fw"></i> Blog</a>
 	</section>
 	<!-- End Front Page -->
 
@@ -35,17 +38,26 @@
 		<div class="grid-container">
 			<h1>About Me</h1>
 			<div class="break"></div>
-			<div class="grid-50">
+			<div class="grid-33">
 				<br />
-				<i class="fa fa-dribbble fa-4x fa-fw fa-blue"></i>
-				<h2>Sports</h2>
-				<p>I play tennis at the Better Tennis Academy, was very ambitious for a few years but had to slow my training schedule to focus on my studies. I used to ski competetively at USC Greim, a skiing club which has regular trainings at Lachtal, and will finish my skiing instructor training during the summer holidays 2014, after which I will be a certified Landesskilehrer.</p>
+				<i class="fa fa-briefcase fa-3x fa-fw fa-blue"></i>
+				<h2>Academics</h2>
+				<p>I currently attend <a href="https://www.popperschule.at/english.html" target="_blank">Sir-Karl-Popperschule</a>, a pilot project school in Vienna for highly gifted students. I chose not to focus on one area, but to broaden my understanding of a variety of topics. This led me to discovering Web Development, which lately has evolved into one of my biggest passions.</p>
 			</div>
-			<div class="grid-50">
+			<div class="grid-33">
 				<br />
-				<i class="fa fa-music fa-4x fa-fw fa-blue"></i>
+				<i class="fa fa-dribbble fa-3x fa-fw fa-blue"></i>
+				<h2>Sports</h2>
+				<p>I play tennis at the <a href="http://bettertennis.at" target="_blank">Better Tennis Academy</a>. Even though I had big ambitions, I had to slow my training schedule a few years back to focus more on my studies. I also used to ski competetively at USC Greim, and will finish my skiing instructor training during the summer holidays of 2014.<p>
+			</div>
+			<div class="grid-33">
+				<br />
+				<i class="fa fa-music fa-3x fa-fw fa-blue"></i>
 				<h2>Music</h2>
 				<p>Music plays a big part in my life, and I spend a lot of time finding new genres, songs and artist. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I play the violin since more years than I can count, recently started to learn singing.</p>
+			</div>
+			<div class="grid-100">
+				<a href="#aboutme" class="btn btn-medium btn-blue btn-radius"><i class="fa fa-cloud-download"></i> Download full CV</a>
 			</div>
 		</div>
 	</section>
@@ -59,7 +71,7 @@
 				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
 				<h2>Dr. Elisabeth Posch</h2>
 				<aside>Online Representation for a local doctor</aside>
-				<a href="#" class="btn btn-small btn-grey btn-radius btn-dis">In Development</a>
+				<div class="btn btn-small btn-grey btn-radius btn-dis">In Development</div>
 			</div>
 		</div>
 	</section>
@@ -68,7 +80,6 @@
 	<!-- Begin Footer -->
 	<section id="footer">
 		<div class="end">
-			<h3 class="cap"><a href="blog.html">Blog</a></h3>
 			<ul>
 				<li><a href="mailto:contact@mstoiber.com" target="_blank">E-Mail</a></li>
 				<li><a href="http://facebook.com/JustStoiber" target="_blank">Facebook</a></li>
@@ -84,7 +95,9 @@
 		</div>
 	</section>
 	<!-- End Footer -->
-
-	<a href="#" class="scrollToTop btn btn-small btn-green btn-radius"><i class="fa fa-arrow-up"></i> Scroll To Top</a>
+	
+	<!-- Scroll to Top Button -->
+	<a href="#" class="btn btn-small btn-blue btn-radius btn-scrollToTop"><i class="fa fa-arrow-up"></i> Scroll To Top</a>
+	<!-- End Scroll to Top Button -->
 </body>
 </html>

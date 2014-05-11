@@ -6,7 +6,6 @@
  * General styles 
  */
 
-
 body {
 	margin: 0px 0px 0px 0px;
 	border: 1px black;
@@ -14,10 +13,20 @@ body {
 
 p {
 	font-family: "Roboto Slab", serif;
+	font-weight: 300;
 	font-size: 18px;
 	text-align: justify;
 	padding-top: 0px;
 	margin-top: 0px;
+
+	/* Hyphenation */
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 a {
@@ -30,24 +39,44 @@ a:hover {
 	color: #808080;
 }
 
-h1, h2, h3, h4 {
-	font-family: 'Roboto', serif;
-	margin-bottom: 0;
-	color: #193441;
+aside {
+	color: #938d8d;
+	font-family: 'Roboto Slab', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.5em;
 }
+
+section {
+	padding-top: 2vh;
+}
+
+/* Headings */
 
 h1 {
 	margin-bottom: 0;
 	margin-top: 0;
+	font-family: "Pacifico", cursive;
+	line-height: 1.25em;
+	color: #193441;
 }
 
 h2 {
+	font-family: 'Roboto Slab', serif;
 	margin-bottom: 0;
 	margin-top: 0;
+	color: #193441;
 }
 
-/* 
- * Classes and IDs
+h3 {
+	font-family: 'Roboto Slab', serif;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/*
+ * Font Awesome Icon Colors
  */
 
 i.fa-green {
@@ -62,103 +91,12 @@ i.fa-grey {
 	color: #43464B;
 }
 
-.scrollToTop {
-	display: inline-block;
-	text-align: center;
-	font-weight: bold;
-	color: #444;
-	position: fixed;
-	font-size: 12px;
-	text-transform: none;
-	border: 2px solid rgba(0, 0, 0, .7);
-	padding: 5px;
-	border-radius: 3px;
-	color: rgba(0, 0, 0, .7);
-	top: 90vh;
-	right: 1vw;
-	text-decoration: none;
-}
 
-.scrollToTop:hover {
-	border: 2px solid rgba(0, 0, 0, 1);
-	color: rgba(0, 0, 0, 1);
-}
+/*
+ * Buttons
+ */
 
-.fptext {
-	color: #193441;
-	margin: 0;
-	text-align: center;
-	z-index: 6;
-	position: relative;
-	top: 50vh;
-	margin: 0;
-	padding: 0;
-}
-
-#frontpage {
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-	/*background-color: #D1DBBD;*/
-	background: url('../img/frontpage.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  	/*background:
-  	radial-gradient(black 15%, transparent 16%) 0 0,
-	radial-gradient(black 15%, transparent 16%) 8px 8px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-	background-color:#282828;
-	background-size:16px 16px;*/
-	z-index: 0;
-}
-
-#aboutme {
-	text-align: center;
-	padding-top: 2vh;
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #d6d6d6;
-	border-top: 1px solid #d6d6d6;
-}
-
-#portfolio {
-	text-align: center;
-	border-bottom: 1px solid #d6d6d6;
-	padding-top: 2vh;
-}
-
-.grid-95 {
-}
-
-aside {
-	color: #938d8d;
-	font-family: 'Roboto Slab', sans-serif;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0.5em;
-}
-
-body:nth-child(odd) {
-	background: #f0f0f0;
-}
-
-.cap {
-	text-transform: capitalize;
-}
-
-.break {
-	padding: 0;
-	margin: 0 auto;
-	width: 88px;
-	height: 2px;
-	background-color: #193441;
-	left: ;
-	margin-bottom: 0.25em;
-}
-
-/* Button */
+ /* General Buttons */
 
 input::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -185,12 +123,17 @@ a.btn,.btn {
 	transition: all 0.2s ease;
 	box-sizing: border-box;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+	margin-bottom: 10px;
 }
-/* Radius */
+
+/* Round Button */
+
 .btn-radius {
   border-radius: 3px;
 }
-/* Sizes */
+
+/* Button sizes */
+
 .btn-small {
 	font-size: 0.8125em;
 	padding: 0.4125em 1.25em;
@@ -204,7 +147,8 @@ a.btn,.btn {
 	padding: 0.5625em 1.5em;
 }
 
-/* Colors */
+/* Button Colors */
+
 .btn-grey {
 	color: #91AA9D;
 	border-color: #91AA9D;
@@ -215,23 +159,45 @@ a.btn,.btn {
   border-color: #91AA9D;		
 }
 
-.btn-green {
+.btn-blue {
 	color: #4a95ba;
 	border-color: #4a95ba;
 }
 
-.btn-green:hover {
+.btn-blue:hover {
 	background: #4a95ba;
 	color: #fff;
 	border-color: #4a95ba;
 }
 
-/* Capitalization */
+.btn-red {
+	color: #C5626D;
+	border-color: #C5626D;
+}
+
+.btn-red:hover {
+	background: #C5626D;
+	color: #fff;
+	border-color: #C5626D;
+}
+
+.btn-green {
+	color: #878428;
+	border-color: #878428;
+}
+
+.btn-green:hover {
+	background: #878428;
+	color: #fff;
+	border-color: #878428;
+}
+
+/* Special Button Styles */
+
 .btn-cap {
 	text-transform: uppercase;
 }
 
-/* Button Disabled */
 .btn-dis {
 	cursor: not-allowed;
 }
@@ -241,28 +207,52 @@ a.btn,.btn {
 	color: #91AA9D;
 }
 
-/* Image at the top */
+/* Scroll to top button */
 
-.circular {
-	width: 200px;
-	height: 200px;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.btn-scrollToTop {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	position: fixed;
+	font-size: 12px;
+	text-transform: none;
+	padding: 5px;
+	border-radius: 3px;
+	top: 94vh;
+	right: 1vw;
+	text-decoration: none;
 }
 
-#img {
-	max-width: 100%;
-	border-radius: 100px;
+
+/* 
+ * Frontpage
+ */
+
+ #frontpage {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background: url('../img/frontpage.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	z-index: 0;
 }
 
-/* Title and Subtitle */
+.fptext {
+	color: #193441;
+	margin: 0;
+	text-align: center;
+	z-index: 6;
+	position: relative;
+	top: 50vh;
+	margin: 0;
+	padding: 0;
+}
 
 .title {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Pacifico', sans-serif;
 	font-weight: 700;
 	margin-bottom: 0px;
 	text-decoration: none;
@@ -277,11 +267,44 @@ a.btn,.btn {
 }
 
 
-/* Footer */
+/*
+ * Main Part
+ */
+
+/* About Me */
+
+#aboutme {
+	text-align: center;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #d6d6d6;
+}
+
+/* Portfolio */
+
+#portfolio {
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+
+.break {
+	padding: 0;
+	margin: 0 auto;
+	width: 88px;
+	height: 2px;
+	background-color: #193441;
+}
+
+/*
+ * Footer
+ */
+
+ /* General Footer Styling */
 
 #footer {
-	background-color: #000;
-	color: #fff;
+	background: #f0f0f0;
+	color: #000;
 }
 
 .end {
@@ -300,4 +323,10 @@ a.btn,.btn {
 .end ul li {
 	display: inline;
 	font-size: 75%;
+}
+
+/* Individual Link Stylings */
+
+#blog {
+	padding-top: 5px;
 }
