@@ -6,24 +6,32 @@
  * General styles 
  */
 
-
 body {
-	border-top: 0.14286em solid black;
 	margin: 0px 0px 0px 0px;
+	border: 1px black;
 }
 
 p {
 	font-family: "Roboto Slab", serif;
+	font-weight: 300;
 	font-size: 18px;
 	text-align: justify;
 	padding-top: 0px;
 	margin-top: 0px;
+
+	/* Hyphenation */
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 a {
 	font-family: "Roboto Slab", serif;
-	text-transform: uppercase;
-	color: #111;
+	color: inherit;
 	text-decoration: underline;
 }
 
@@ -31,104 +39,326 @@ a:hover {
 	color: #808080;
 }
 
+aside {
+	color: #938d8d;
+	font-family: 'Roboto Slab', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.5em;
+}
+
+section {
+	padding-top: 2vh;
+}
+
 /* Headings */
 
-.heading {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-	font-size: 36px;
-	text-transform: uppercase;
-	margin-bottom: 0px;
+h1 {
+	margin-bottom: 0;
+	margin-top: 0;
+	font-family: "Pacifico", cursive;
+	line-height: 1.25em;
+	color: #193441;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	margin-bottom: 0;
+	margin-top: 0;
+	color: #193441;
+}
+
+h3 {
+	font-family: 'Roboto Slab', serif;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/*
+ * Font Awesome Icon Colors
+ */
+
+i.fa-green {
+	color: #3CB371;
+}
+
+i.fa-blue {
+	color: #193441;
+}
+
+i.fa-grey {
+	color: #43464B;
+}
+
+
+/*
+ * Buttons
+ */
+
+ /* General Buttons */
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="submit"].btn,
+button.btn {
+	cursor: pointer;
+}
+
+a.btn,.btn {
+	display: inline-block;
+	outline: none;
+	*zoom: 1;
 	text-align: center;
+	text-decoration: none;
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	border: 1px solid;
+	transition: all 0.2s ease-in;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+	margin-bottom: 10px;
 }
 
-.cap {
-	text-transform: capitalize;
+/* Round Button */
+
+.btn-radius {
+  border-radius: 3px;
 }
 
+/* Button sizes */
+
+.btn-small {
+	font-size: 0.8125em;
+	padding: 0.4125em 1.25em;
+}
+.btn-medium {
+	font-size: 0.9375em;
+	padding: 0.5375em 1.375em;
+}
+.btn-large {
+	font-size: 1.0625em;
+	padding: 0.5625em 1.5em;
+}
+
+/* Button Colors */
+
+.btn-grey {
+	color: #91AA9D;
+	border-color: #91AA9D;
+}
+.btn-grey:hover {
+  background: #91AA9D;
+  color: #fff;
+  border-color: #91AA9D;		
+}
+
+.btn-blue {
+	color: #4a95ba;
+	border-color: #4a95ba;
+}
+
+.btn-blue:hover {
+	background: #4a95ba;
+	color: #fff;
+	border-color: #4a95ba;
+}
+
+.btn-red {
+	color: #C5626D;
+	border-color: #C5626D;
+}
+
+.btn-red:hover {
+	background: #C5626D;
+	color: #fff;
+	border-color: #C5626D;
+}
+
+.btn-green {
+	color: #878428;
+	border-color: #878428;
+}
+
+.btn-green:hover {
+	background: #878428;
+	color: #fff;
+	border-color: #878428;
+}
+
+/* Special Button Styles */
+
+.btn-cap {
+	text-transform: uppercase;
+}
+
+.btn-dis {
+	cursor: not-allowed;
+}
+
+.btn-dis:hover {
+	background: transparent;
+	color: #91AA9D;
+}
+
+/* Scroll to top button */
+
+.btn-scrollToTop {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	position: fixed;
+	font-size: 12px;
+	text-transform: none;
+	padding: 5px;
+	border-radius: 3px;
+	top: 94vh;
+	right: 1vw;
+	text-decoration: none;
+}
 
 
 /* 
- * Classes and IDs in order of appearance
+ * Frontpage
  */
 
-.main {
-	width: 100%;
-	max-width: 660px;
-	margin-left: auto;
-	margin-right: auto;
+ #frontpage {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background: url('../img/frontpage.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	z-index: 0;
 }
 
-/* Top Area */
-
-#top {
+.fptext {
+	color: #193441;
+	margin: 0;
 	text-align: center;
-	margin-bottom: 60px;
+	z-index: 6;
+	position: relative;
+	top: 50vh;
+	margin: 0;
+	padding: 0;
 }
 
-/* Image at the top */
-
-.circular {
-	width: 200px;
-	height: 200px;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20.44px;
-}
-
-#img {
-	max-width: 100%;
-	border-radius: 100px;
-}
-
-/* Title and Subtitle */
-
-#title {
-	font-family: 'Roboto', sans-serif;
+.title {
+	font-family: 'Pacifico', sans-serif;
 	font-weight: 700;
 	margin-bottom: 0px;
 	text-decoration: none;
 	font-size: 48px;
 }
 
-#subtitle {
+.subtitle {
 	font-family: 'Roboto Slab', serif;
-	color: #808080;
+	font-weight: 300;
 	margin-top: 0px;
 	font-size: 24px;
 }
 
-/* Main Area */
 
-#main {
+/*
+ * Main Part
+ */
+
+/* About Me */
+
+#aboutme {
 	text-align: center;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #d6d6d6;
 }
 
-.three {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+/* Portfolio */
+
+#portfolio {
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
 }
 
-/* Footer */
+
+.break {
+	padding: 0;
+	margin: 0 auto;
+	width: 88px;
+	height: 2px;
+	background-color: #193441;
+}
+
+/*
+ * Footer
+ */
+
+ /* General Footer Styling */
+
+#footer {
+	background: #f0f0f0;
+	color: #000;
+}
 
 .end {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	transition: all 0.2s ease-in;
 }
 
 .end ul {
 	-webkit-padding-start: 0px;
 	padding-left: 0px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 2vh;
 }
 
 .end ul li {
 	display: inline;
 	font-size: 75%;
+	padding-right: 5px;
+}
+
+#imp {
+	margin-bottom: 0;
+}
+
+/* Social Buttons */
+
+.fa-hover {
+	transition: all 0.1s ease-in;
+}
+
+.fa-envelope:hover {
+	color: #000;
+}
+
+.fa-facebook:hover {
+	color: #3B5998;
+}
+
+.fa-twitter:hover {
+	color: #4099FF;
+}
+
+.fa-google-plus:hover {
+	color: #dd4b39;
+}
+
+.fa-github:hover {
+	color: #000;
+}
+
+.fa-gavel:hover {
+	color: #000;
 }
