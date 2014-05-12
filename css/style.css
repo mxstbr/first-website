@@ -120,7 +120,7 @@ a.btn,.btn {
 	letter-spacing: 1px;
 	vertical-align: middle;
 	border: 1px solid;
-	transition: all 0.1s ease-in;
+	transition: all 0.2s ease-in;
 	box-sizing: border-box;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
 	margin-bottom: 10px;
@@ -312,6 +312,7 @@ a.btn,.btn {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	transition: all 0.2s ease-in;
 }
 
 .end ul {
@@ -332,7 +333,7 @@ a.btn,.btn {
 
 /* Social Buttons */
 
-.fa {
+.fa-hover {
 	transition: all 0.1s ease-in;
 }
 

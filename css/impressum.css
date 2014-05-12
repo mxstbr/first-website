@@ -1,0 +1,19 @@
+.main {
+	max-width: 662px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.heading {
+	font-family: "Roboto Slab", sans-serif;
+
+}
+
+p {
+	text-indent:30px;
+}
+
+.end ul {
+	margin-bottom: 0;
+}
