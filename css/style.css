@@ -120,7 +120,7 @@ a.btn,.btn {
 	letter-spacing: 1px;
 	vertical-align: middle;
 	border: 1px solid;
-	transition: all 0.2s ease;
+	transition: all 0.1s ease-in;
 	box-sizing: border-box;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
 	margin-bottom: 10px;
@@ -317,16 +317,41 @@ a.btn,.btn {
 .end ul {
 	-webkit-padding-start: 0px;
 	padding-left: 0px;
-	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .end ul li {
 	display: inline;
 	font-size: 75%;
+	padding-right: 5px;
 }
 
-/* Individual Link Stylings */
+#imp {
+	margin-bottom: 0;
+}
 
-#blog {
-	padding-top: 5px;
+/* Social Buttons */
+
+.fa {
+	transition: all 0.1s ease-in;
+}
+
+.fa-envelope:hover {
+	color: #000;
+}
+
+.fa-facebook:hover {
+	color: #3B5998;
+}
+
+.fa-twitter:hover {
+	color: #4099FF;
+}
+
+.fa-google-plus:hover {
+	color: #dd4b39;
+}
+
+.fa-github:hover {
+	color: #000;
 }
