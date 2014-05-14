@@ -13,10 +13,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/contact.css">
 
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:300,400|Pacifico' rel='stylesheet' type='text/css'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="app.js"></script>
 
 	<script type="text/javascript" src="js/scroll.js"></script>
 
@@ -27,13 +29,12 @@
 	<section id="frontpage">
 			<h1 class="fptext title" id="logo">Maximilian Stoiber</h1>
 			<h3 class="fptext subtitle">Violinist, Front-End Developer, Skiing Instructor</p>
-			<a href="#aboutme" class="btn btn-small btn-blue btn-radius" id="a"><i class="fa fa-angle-down"></i> About me <i class="fa fa-angle-down"></i></a>
-			<a href="#portfolio" class="btn btn-small btn-green btn-radius" id="p"><i class="fa fa-angle-double-down"></i> Portfolio <i class="fa fa-angle-double-down"></i></a>
-			<!-- <a href="#" class="btn btn-small btn-red btn-radius" id="blog"><i class="fa fa-link fa-fw"></i> Blog</a> -->
+			<button class="btn-blue" href="#aboutme" id="a"><i class="fa fa-angle-down"></i> About me <i class="fa fa-angle-down"></i></button>
+			<button href="#portfolio" id="p"><i class="fa fa-angle-double-down"></i> Portfolio <i class="fa fa-angle-double-down"></i></button>
 	</section>
 	<!-- End Front Page -->
 
-	<!-- Begin work -->
+	<!-- Begin About Me -->
 	<section id="aboutme">
 		<div class="grid-container">
 			<h1>About Me</h1>
@@ -57,31 +58,76 @@
 				<p>Music plays a big part in my life, and I spend a lot of time finding new genres, songs and artists. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I have been playing the violin for more years than I can count and recently I began taking singing classes.</p>
 			</div>
 			<div class="grid-100">
+<<<<<<< HEAD
 				<a href="CV.pdf" class="btn btn-medium btn-blue btn-radius" target="_blank"><i class="fa fa-cloud-download"></i> Download full CV</a>
+=======
+				<button onClick="window.open('cv.pdf')"><i class="fa fa-cloud-download"></i> Download full CV</button>
+>>>>>>> dev
 			</div>
 		</div>
 	</section>
+	<!-- End About Me -->
 
+	<!-- Begin Portfolio -->
 	<section id="portfolio">
 		<div class="grid-container">
 			<h1>Portfolio</h1>
 			<div class="break"></div>
 			<br />
-			<div class="grid-50">
+			<div class="grid-33">
 				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
 				<h2>This Website</h2>
 				<aside>Personal Website for myself</aside>
-				<a href="http://mstoiber.com" class="btn btn-medium btn-blue btn-radius">Visit Website</a>
+				<button onClick="window.open('http://mstoiber.com')" class="btn-blue">Visit Website</button>
 			</div>
-			<div class="grid-50">
+			<div class="grid-33">
 				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
 				<h2>Dr. Elisabeth Posch</h2>
 				<aside>Online Representation for a local doctor</aside>
-				<div class="btn btn-small btn-grey btn-radius btn-dis">In Development</div>
+				<button class="btn-dis">In Development</button>
+			</div>
+			<div class="grid-33">
+				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
+				<h2>Roy Lockhart</h2>
+				<aside>Personal Website for Roy Lockhart</aside>
+				<button class="btn-dis">In Development</button>
 			</div>
 		</div>
 	</section>
+	<!-- End Portfolio -->
 
+	<!-- Begin Contact -->
+	<section id="contact">
+		<div class="grid-container">
+			<h1>Contact</h1>
+			<div class="break"></div>
+			<br />
+			<div class="grid-100">
+				<div class="form-messages"></div>
+				<form id="ajax-contact" method="post" action="mailer.php">
+				    <div class="field">
+				        <label for="name">Name:</label>
+				        <input type="text" id="name" name="name" required>
+				    </div>
+
+				    <div class="field">
+				        <label for="email">Email:</label>
+				        <input type="email" id="email" name="email" required>
+				    </div>
+
+				    <div class="field">
+				        <label for="message">Message:</label>
+				        <textarea id="message" name="message" required></textarea>
+				    </div>
+
+				    <div class="field">
+				        <button type="submit">Send</button>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact -->
 
 	<!-- Begin Footer -->
 	<section id="footer">
@@ -99,7 +145,7 @@
 	<!-- End Footer -->
 	
 	<!-- Scroll to Top Button -->
-	<a href="#" class="btn btn-small btn-blue btn-radius btn-scrollToTop"><i class="fa fa-arrow-up"></i> Scroll To Top</a>
+	<button href="#" class="btn-blue btn-scrollToTop"><i class="fa fa-arrow-up"></i> Scroll To Top</button>
 	<!-- End Scroll to Top Button -->
 </body>
 </html>
