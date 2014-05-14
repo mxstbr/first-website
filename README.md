@@ -2,13 +2,10 @@ Website - http://mstoiber.com
 =======
 
 ## Description
-This is the GitHub Repo for my personal Website, currently live at http://mstoiber.com. 
+This is the GitHub Repo for my personal Website.
 
 ## Branches
-The master branch is a very old and undeveloped one, if you want to fork the repo please look at the dev branch.
-
-## Example
-You can see the current state of the website at http://mstoiber.com/typo, but it is under heavy development right now, so it might change any second. 
+Master branch is the version which is currently online at http://mstoiber.com. Current development is done at the dev branch, which you can see over at http://mstoiber.com/dev (ATTENTION: Might look really bad because I tried something new).
 
 ## License
-Available under the MIT License.
+Available under the MIT License. (You can use the code freely as long as you credit me somewhere)
