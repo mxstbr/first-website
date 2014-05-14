@@ -2,7 +2,7 @@ Website - http://mstoiber.com
 =======
 
 ## Description
-This is the GitHub Repo for my personal Website, currently *NOT* available at http://mstoiber.com. 
+This is the GitHub Repo for my personal Website, currently live at http://mstoiber.com. 
 
 ## Branches
 The master branch is a very old and undeveloped one, if you want to fork the repo please look at the dev branch.

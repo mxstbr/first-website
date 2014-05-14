@@ -77,6 +77,14 @@ h3 {
 	margin-bottom: 0;
 }
 
+.break {
+	padding: 0;
+	margin: 0 auto;
+	width: 88px;
+	height: 2px;
+	background-color: #193441;
+}
+
 
 /*
  * Font Awesome Icon Colors
@@ -99,8 +107,8 @@ i.fa-grey {
  * Buttons
  */
 
-/* General Buttons */
-/* r: 0.69523809523
+/* General Buttons
+ * r: 0.69523809523
  * g: 0.69849246231
  * b: 0.69565217391 */
 
@@ -228,14 +236,6 @@ button:active {
 /* Contact */
 
 #contact {
-}
-
-.break {
-	padding: 0;
-	margin: 0 auto;
-	width: 88px;
-	height: 2px;
-	background-color: #193441;
 }
 
 /*
