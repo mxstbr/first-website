@@ -49,6 +49,7 @@ aside {
 
 section {
 	padding-top: 2vh;
+	border-bottom: 1px solid #d6d6d6;
 }
 
 /* Headings */
@@ -59,6 +60,7 @@ h1 {
 	font-family: "Pacifico", cursive;
 	line-height: 1.25em;
 	color: #193441;
+	text-align: center;
 }
 
 h2 {
@@ -96,115 +98,53 @@ i.fa-grey {
  * Buttons
  */
 
- /* General Buttons */
+/* General Buttons */
+/* r: 0.69523809523
+ * g: 0.69849246231
+ * b: 0.69565217391 */
 
-input::-moz-focus-inner,
-button::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input[type="submit"].btn,
-button.btn {
-	cursor: pointer;
-}
-
-a.btn,.btn {
-	display: inline-block;
-	outline: none;
-	*zoom: 1;
-	text-align: center;
-	text-decoration: none;
-	font-family: "Roboto Slab", sans-serif;
-	font-weight: 400;
-	letter-spacing: 1px;
-	vertical-align: middle;
-	border: 1px solid;
-	transition: all 0.2s ease-in;
-	box-sizing: border-box;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
-	margin-bottom: 10px;
-}
-
-/* Round Button */
-
-.btn-radius {
+button {
+  display: inline-block;
   border-radius: 3px;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8em;
+  background: #69c773;
+  border-bottom: 1px solid #498b50;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-/* Button sizes */
+button:hover, button:focus {
+  opacity: 0.75;
+  cursor: pointer;
+}
 
-.btn-small {
-	font-size: 0.8125em;
-	padding: 0.4125em 1.25em;
-}
-.btn-medium {
-	font-size: 0.9375em;
-	padding: 0.5375em 1.375em;
-}
-.btn-large {
-	font-size: 1.0625em;
-	padding: 0.5625em 1.5em;
+button:active {
+  opacity: 1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
 }
 
 /* Button Colors */
 
-.btn-grey {
-	color: #91AA9D;
-	border-color: #91AA9D;
-}
-.btn-grey:hover {
-  background: #91AA9D;
-  color: #fff;
-  border-color: #91AA9D;		
-}
-
 .btn-blue {
-	color: #4a95ba;
-	border-color: #4a95ba;
-}
-
-.btn-blue:hover {
-	background: #4a95ba;
-	color: #fff;
-	border-color: #4a95ba;
-}
-
-.btn-red {
-	color: #C5626D;
-	border-color: #C5626D;
-}
-
-.btn-red:hover {
-	background: #C5626D;
-	color: #fff;
-	border-color: #C5626D;
-}
-
-.btn-green {
-	color: #878428;
-	border-color: #878428;
-}
-
-.btn-green:hover {
-	background: #878428;
-	color: #fff;
-	border-color: #878428;
-}
-
-/* Special Button Styles */
-
-.btn-cap {
-	text-transform: uppercase;
+	background-color: #4a95ba;
+	border-color: rgba(51, 104, 129, 1)
 }
 
 .btn-dis {
-	cursor: not-allowed;
+	background-color: rgb(192, 192, 192);
+	border-color: rgb(133, 134, 134);
 }
 
 .btn-dis:hover {
-	background: transparent;
-	color: #91AA9D;
+	cursor: not-allowed;
+	opacity: 1;
 }
 
 /* Scroll to top button */
@@ -275,18 +215,19 @@ a.btn,.btn {
 
 #aboutme {
 	text-align: center;
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #d6d6d6;
-	border-top: 1px solid #d6d6d6;
 }
 
 /* Portfolio */
 
 #portfolio {
 	text-align: center;
-	border-bottom: 1px solid #d6d6d6;
+	background-color: #f2f2f2;
 }
 
+/* Contact */
+
+#contact {
+}
 
 .break {
 	padding: 0;
