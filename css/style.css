@@ -66,6 +66,7 @@ h2 {
 	margin-bottom: 0;
 	margin-top: 0;
 	color: #193441;
+	font-size: 110%;
 }
 
 h3 {
@@ -246,7 +247,7 @@ a.btn,.btn {
 	text-align: center;
 	z-index: 6;
 	position: relative;
-	top: 50vh;
+	top: 45vh;
 	margin: 0;
 	padding: 0;
 }
