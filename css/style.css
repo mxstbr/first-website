@@ -15,18 +15,9 @@ p {
 	font-family: "Roboto Slab", serif;
 	font-weight: 300;
 	font-size: 18px;
-	text-align: justify;
+	text-align: center;
 	padding-top: 0px;
 	margin-top: 0px;
-
-	/* Hyphenation */
-	-ms-word-break: break-all;
-	word-break: break-all;
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
 }
 
 a {
@@ -48,12 +39,14 @@ aside {
 }
 
 section {
-	padding-top: 2vh;
+	padding-top: 3em;
+	padding-bottom: 3em;
 	border-top: 1px solid #d6d6d6;
 }
 
-body:first-child {
+section:first-child {
 	border-top: none;
+	padding-top: 0;
 }
 
 /* Headings */
@@ -251,6 +244,8 @@ button:active {
 #footer {
 	background: #f0f0f0;
 	color: #000;
+	padding-top: 1.5em;
+	padding-bottom: 0;
 }
 
 .end {
@@ -266,7 +261,7 @@ button:active {
 	padding-left: 0px;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-bottom: 2vh;
+	padding-bottom: 1em;
 }
 
 .end ul li {
