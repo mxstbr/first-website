@@ -38,4 +38,10 @@ $(document).ready(function (){
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
+
+    $('.title').addClass('animated fadeInUp');
+
+    setTimeout(function () {
+        $('.subtitle').show().addClass('animated fadeInUp');}, 300
+    );
 });

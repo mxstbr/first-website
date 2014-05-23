@@ -18,6 +18,7 @@ p {
 	text-align: center;
 	padding-top: 0px;
 	margin-top: 0px;
+	color: #666;
 }
 
 a {
@@ -39,8 +40,8 @@ aside {
 }
 
 section {
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	border-top: 1px solid #d6d6d6;
 }
 
@@ -49,27 +50,30 @@ section:first-child {
 	padding-top: 0;
 }
 
+img {
+	max-width: 100%;
+}
+
 /* Headings */
 
 h1 {
-	margin-bottom: 0;
 	margin-top: 0;
-	font-family: "Pacifico", cursive;
+	font-family: "Montserrat", cursive;
 	line-height: 1.25em;
-	color: #193441;
+	color: black;
 	text-align: center;
 }
 
 h2 {
-	font-family: 'Roboto Slab', serif;
-	margin-bottom: 0;
+	font-family: 'Montserrat', serif;
+	margin-bottom: 0.2em;
 	margin-top: 0;
-	color: #193441;
-	font-size: 110%;
+	color: black;
+	color: #333;
 }
 
 h3 {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Montserrat', serif;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -79,7 +83,8 @@ h3 {
 	margin: 0 auto;
 	width: 88px;
 	height: 2px;
-	background-color: #193441;
+	background-color: black;
+	margin-bottom: 10px;
 }
 
 
@@ -92,7 +97,7 @@ i.fa-green {
 }
 
 i.fa-blue {
-	color: #193441;
+	color: black;
 }
 
 i.fa-grey {
@@ -169,13 +174,37 @@ button:active {
 	text-decoration: none;
 }
 
+/* Better Underlines */
+
+.uled {
+  color: inherit;
+  color: transparent;
+  text-shadow: 0 0 #333, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
+  background: -webkit-linear-gradient(#999, #999) center 1.09em no-repeat;
+  background: linear-gradient(#999, #999) center 1.09em no-repeat;
+  background-size: 85% 1px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.uled:hover {
+  /*  backgrounds won't size larger than 100%  */
+  background-size: 95% 1px;
+  cursor: default;
+}
+
 
 /* 
  * Frontpage
  */
 
  #frontpage {
-	height: 100vh;
+	-webkit-height: 100vh;
+    -moz-height: 100vh;
+    -ms-height: 100vh;
+    -o-height: 100vh;
+    height: 100vh;
+
 	padding: 0;
 	margin: 0;
 	background: url('../img/frontpage.jpg') no-repeat center center fixed;
@@ -187,22 +216,27 @@ button:active {
 }
 
 .fptext {
-	color: #193441;
+	color: black;
 	margin: 0;
 	text-align: center;
 	z-index: 6;
 	position: relative;
-	top: 45vh;
+	-webkit-top: 45vh;
+    -moz-top: 45vh;
+    -ms-top: 45vh;
+    -o-top: 45vh;
+    top: 45vh;
 	margin: 0;
 	padding: 0;
 }
 
 .title {
-	font-family: 'Pacifico', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	margin-bottom: 0px;
 	text-decoration: none;
 	font-size: 48px;
+	text-transform: uppercase;
 }
 
 .subtitle {
@@ -210,6 +244,7 @@ button:active {
 	font-weight: 300;
 	margin-top: 0px;
 	font-size: 24px;
+	color: #333;
 }
 
 
@@ -302,4 +337,64 @@ button:active {
 
 .fa-gavel:hover {
 	color: #000;
+}
+
+/* Loading animation */
+
+#loader { 
+    display: block; 
+    position: absolute;
+    width: 15%;
+    max-width: 128px;
+
+    -webkit-left: calc(50% - 64px);
+    -moz-left: calc(50% - 64px);
+    -ms-left: calc(50% - 64px);
+    -o-left: calc(50% - 64px);
+    left: calc(50% - 64px); 
+
+    -webkit-top: calc(50% - 64px);
+    -moz-top: calc(50% - 64px);
+    -ms-top: calc(50% - 64px);
+    -o-top: calc(50% - 64px);
+    top: calc(50% - 64px); 
+    z-index: 1000;
+}
+
+.loading {
+	position: absolute; 
+    z-index: 100;
+
+    -webkit-height: 100%;
+    -moz-height: 100%;
+    -ms-height: 100%;
+    -o-height: 100%;
+    height: 100%;
+
+	-webkit-width: 100%;
+	-moz-width: 100%;
+	-ms-width: 100%;
+	-o-width: 100%;
+	width: 100%;
+
+    background-color: #f2f2f2;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-device-width : 480px) {
+/* Styles */
+	#loader { 
+		-webkit-left: calc(50% - 25px);
+    	-moz-left: calc(50% - 25px);
+	    -ms-left: calc(50% - 25px);
+	    -o-left: calc(50% - 25px);
+	    left: calc(50% - 25px); 
+
+	    -webkit-top: calc(50% - 25px);
+	    -moz-top: calc(50% - 25px);
+	    -ms-top: calc(50% - 25px);
+	    -o-top: calc(50% - 25px);
+	    top: calc(50% - 25px); 
+	}
 }

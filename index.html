@@ -1,8 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<style>
+	</style>
+	<noscript>
+		<style>
+			#loader, .loading { display: none;}
+		</style>
+	</noscript>
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script>
+	$(window).load(function() {
+		$("#loader").delay(1000).fadeOut("slow");
+    	$(".loading").delay(1000).fadeOut("slow");
+    });
+	</script>
 	<meta charset="UTF-8">
-	<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<meta name=”description” content=”Maximilian Stoibers Personal Website”>
 	<link rel=”author” href=”https://plus.google.com/+MaxStoiber“/>
@@ -16,15 +30,15 @@
 	<link rel="stylesheet" href="css/contact.css">
 
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:300,400|Pacifico' rel='stylesheet' type='text/css'>
-	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="app.js"></script>
-
-	<script type="text/javascript" src="js/scroll.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:300,400|Montserrat' rel='stylesheet' type='text/css'>
+	
 
 	<title>Maximilian Stoiber</title>
 </head>
 <body>
+	<div class="loading">
+		<img src="img/rubics.gif" id="loader">
+	</div>
 	<!-- Begin Front Page -->
 	<section id="frontpage">
 			<h1 class="fptext title" id="logo">Maximilian Stoiber</h1>
@@ -37,25 +51,18 @@
 	<!-- Begin About Me -->
 	<section id="aboutme">
 		<div class="grid-container">
-			<h1>About Me</h1>
-			<div class="break"></div>
+			<h1><span class="uled">About Me</span></h1>
 			<div class="grid-33">
-				<br />
-				<i class="fa fa-briefcase fa-3x fa-fw fa-blue"></i>
 				<h2>Academics</h2>
 				<p>I currently attend the <a href="https://www.popperschule.at/english.html" target="_blank">Sir-Karl-Popperschule</a>, a pilot project school in Vienna for highly gifted students. I chose not to focus on only one area, but to broaden my understanding of a variety of topics. This led me to discovering Web Development, which has evolved into one of my biggest passions.</p>
 			</div>
 			<div class="grid-33">
-				<br />
-				<i class="fa fa-dribbble fa-3x fa-fw fa-blue"></i>
 				<h2>Sports</h2>
 				<p>I play tennis at the <a href="http://bettertennis.at" target="_blank">Better Tennis Academy</a>. Even though I had big ambitions, I had to slow down my training schedule a few years ago to focus more on my studies. I also used to ski competetively at USC Greim, and will finish my skiing instructor training during the summer holidays of 2014.<p>
 			</div>
 			<div class="grid-33">
-				<br />
-				<i class="fa fa-music fa-3x fa-fw fa-blue"></i>
 				<h2>Music</h2>
-				<p>Music plays a big part in my life, and I spend a lot of time finding new genres, songs and artists. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I have been playing the violin for more years than I can count and recently I began taking singing classes.</p>
+				<p>Music plays a big role in my life, and I spend a lot of time finding new genres, songs and artists. I like many genres, from Classic over EDM to Hip-Hop, and love discovering new ones! I have been playing the violin for more years than I can count and recently I began taking singing classes.</p>
 			</div>
 			<div class="grid-100">
 				<button onClick="window.open('cv.pdf')"><i class="fa fa-cloud-download"></i> Download full CV</button>
@@ -67,26 +74,12 @@
 	<!-- Begin Portfolio -->
 	<section id="portfolio">
 		<div class="grid-container">
-			<h1>Portfolio</h1>
-			<div class="break"></div>
-			<br />
-			<div class="grid-33">
-				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
-				<h2>This Website</h2>
-				<aside>Personal Website for myself</aside>
-				<button onClick="window.open('http://mstoiber.com')" class="btn-blue">Visit Website</button>
-			</div>
-			<div class="grid-33">
-				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
-				<h2>Dr. Elisabeth Posch</h2>
+			<h1><span class="uled">Featured Project</span></h1>
+			<div class="grid-100">
+				<h2>http://unfallchirurgin.com</h2>
 				<aside>Online Representation for a local doctor</aside>
 				<button class="btn-dis">In Development</button>
-			</div>
-			<div class="grid-33">
-				<i class="fa fa-desktop fa-2x fa-fw fa-grey"></i>
-				<h2>Roy Lockhart</h2>
-				<aside>Personal Website for Roy Lockhart</aside>
-				<button class="btn-dis">In Development</button>
+				<img src="img/unfallchirurgin.jpg" />
 			</div>
 		</div>
 	</section>
@@ -95,8 +88,7 @@
 	<!-- Begin Contact -->
 	<section id="contact">
 		<div class="grid-container">
-			<h1>Contact</h1>
-			<div class="break"></div>
+			<h1><span class="uled">Contact</span></h1>
 			<br />
 			<div class="grid-100">
 				<div class="form-messages"></div>
@@ -145,5 +137,8 @@
 	<!-- Scroll to Top Button -->
 	<button href="#" class="btn-blue btn-scrollToTop"><i class="fa fa-arrow-up"></i> Scroll To Top</button>
 	<!-- End Scroll to Top Button -->
+
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
 </body>
 </html>
