@@ -1,0 +1,28 @@
+#contact {
+	background-color: #00C8C8;
+}
+
+button {
+	box-shadow: 0 6px rgb(190,37,0);
+}
+
+button:hover,
+button:focus {
+	box-shadow: 0 4px rgb(190,37,0);
+}
+
+button:active {
+	box-shadow: 0 0 rgb(190,37,0);
+}
+
+.btn-blue {
+	background-color: #FF6100;
+}
+
+#footer {
+	background-color: #FF6100;
+}
+
+a:hover {
+	color: #FF6100;
+}
